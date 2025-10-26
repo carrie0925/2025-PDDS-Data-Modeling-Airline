@@ -10,7 +10,7 @@ By completing the **five TODO sections** inside `server.py`, you will make the s
 - Employee salary and certificate summary (table)
 
 You can get the database file on Canvas.
-![Database_resource](Database_resource.png)
+![Database_resource](/src/Database_resource.png)
 
 ---
 
@@ -104,7 +104,7 @@ Each group should submit the following:
    - The left chart shows correct flight counts.  
    - The right table shows real employee and certificate data.  
    - Choosing same Employee's name as following screenshot.
-   ![Submission_example](Submission_example.png)
+   ![Submission_example](/src/Submission_example.png)
 
 
 2. Please name your screenshot file:  
