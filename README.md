@@ -37,6 +37,7 @@ Folder structure overview:
 │   └── main.js
 ├── data/
 │   └── airline.sqlite    # SQLite database file
+├── src/
 └── README.md
 ```
 
@@ -109,7 +110,7 @@ Each group should submit the following:
 
 2. Please name your screenshot file:  
    ```
-   GroupNumbe_Airline_SQL.png
+   GroupNumber_Airline_SQL.png
    ```
 4. Upload the screenshot to week 8 Teams channel.
 
