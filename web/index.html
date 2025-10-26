@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airline Dashboard</title>
+  <style>
+    :root {
+      --card: #fff;
+      --border: #e6e6e6;
+      --shadow: 0 1px 6px rgba(0,0,0,.06);
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin: 24px;
+      background: #fafafa;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr; 
+      gap: 20px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 16px 18px;
+    }
+
+    .chart-card {
+      height: 540px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th, td {
+      border-top: 1px solid #f0f0f0;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    thead th {
+      background: #fcfcfc;
+      border-top: 0;
+      font-size: 13px;
+    }
+
+    tr:hover {
+      background: #fafafa;
+    }
+
+    canvas {
+      width: 100%;
+      height: 460px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>✈️ Airline Dashboard</h1>
+  <span class="muted">Check employees on the right (up to 3) → the bar chart on the left shows the number of flights per aircraft type each selected employee can operate.</span>
+
+  <div class="container">
+    <div class="card chart-card">
+      <h3>Flights per aircraft (filterable by employee)</h3>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h3>Employee Salary & Certificate Count</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>Employee Name</th>
+            <th class="right">Salary</th>
+            <th class="right">Certificates</th>
+          </tr>
+        </thead>
+        <tbody id="empBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
