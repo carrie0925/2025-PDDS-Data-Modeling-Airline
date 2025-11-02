@@ -5,7 +5,7 @@ import sqlite3, os
 # Config
 # -------------------------
 APP_PORT = int(os.getenv("PORT", "5175"))
-DB_PATH  = os.getenv("DB_PATH", "./data/airline.sqlite")  
+DB_PATH  = "./data/airline.sqlite"   # <- simple sqlite3 path (teaching-friendly)
 
 app = Flask(__name__, static_folder="web", static_url_path="")
 
@@ -14,11 +14,11 @@ app = Flask(__name__, static_folder="web", static_url_path="")
 # -------------------------
 def query_db(sql, args=(), one=False):
     """Execute a read-only query and return rows as dict-like objects."""
-    con = sqlite3.connect(DB_PATH)
-    con.row_factory = sqlite3.Row
-    cur = con.execute(sql, args)
+    conn = sqlite3.connect(DB_PATH)     # <- sqlite3.connect('...') style
+    conn.row_factory = sqlite3.Row
+    cur = conn.execute(sql, args)
     rows = cur.fetchall()
-    con.close()
+    conn.close()
     return (rows[0] if rows else None) if one else rows
 
 # -------------------------
@@ -51,7 +51,6 @@ def employees():
         - ename  (combine first and last name into one readable field)
     Sorting:
         - Order results by eid in ascending order.
-        
     """
     rows = query_db("""
         -- WRITE YOUR SQL HERE
@@ -67,7 +66,6 @@ def flights_per_aircraft():
       - Without eids: all aircraft with total flight counts
       - With ?eids=E1,E2,E3: compare multiple employees' certified aircraft
     """
-
     eids_param = request.args.get("eids")
     if not eids_param:
         single = request.args.get("eid", type=int)
@@ -89,8 +87,7 @@ def flights_per_aircraft():
             - Aggregate results by aircraft identifier.
         Sorting:
             - Sort first by flight count from highest to lowest, 
-            then by aircraft ID in ascending order.
-
+              then by aircraft ID in ascending order.
         """
         rows = query_db("""
             -- WRITE YOUR SQL HERE
@@ -124,7 +121,7 @@ def flights_per_aircraft():
         """
         # TODO 04:
         Goal: Find all aircraft that one selected employee is certified to operate,
-                along with the number of flights for each of those aircraft.
+              along with the number of flights for each of those aircraft.
         Expected result: Multiple rows, one per aircraft, showing flight frequency.
         Required columns:
             - aid
@@ -132,7 +129,7 @@ def flights_per_aircraft():
             - flights  (total number of flights on that aircraft)
         Relationships & filtering:
             - Use aircraft and flight data, but include only aircraft linked
-            to that employee’s certifications.
+              to that employee’s certifications.
             - The filtering should depend on the employee’s ID.
         Grouping & sorting:
             - Summarize by aircraft ID.
@@ -168,7 +165,7 @@ def employee_salary_cert():
     # TODO 05:
     Goal: List employees who possess at least one valid aircraft certificate.
     Expected result: Each row shows one employee with their salary
-                    and the number of certificates they hold.
+                     and the number of certificates they hold.
     Required columns:
         - eid
         - ename  (combine first and last name)
@@ -179,7 +176,6 @@ def employee_salary_cert():
         - Include only employees whose certificate count is greater than zero.
     Sorting:
         - Display employees in order of salary, from highest to lowest.
-
     """
     rows = query_db("""
         -- WRITE YOUR SQL HERE
