@@ -98,8 +98,7 @@ The five TODOs are:
 ---
 
 ## 5. Submission Format
-
-Each group should submit the following:
+Submit the following:
 
 1. **A screenshot** of the running dashboard (browser view):  
    - The left chart shows correct flight counts.  
@@ -110,7 +109,7 @@ Each group should submit the following:
 
 2. Please name your screenshot file:  
    ```
-   GroupNumber_Airline_SQL.png
+   StudentID_Airline_SQL.png
    ```
 4. Upload the screenshot to week 8 Teams channel.
 
