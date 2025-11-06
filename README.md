@@ -1,6 +1,6 @@
 # 🧩 Airline Database Practice (SQL + Flask)
 
-![Dashboard_output](/src/output.mov)
+![Dashboard_output](/src/Dashboard%20output.webp)
 
 ## 1. Project Description
 This exercise helps you practice writing SQL queries in a real environment.
