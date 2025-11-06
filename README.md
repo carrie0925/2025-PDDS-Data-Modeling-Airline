@@ -33,7 +33,7 @@ pip install db-browser-for-sqlite
 Folder structure overview:
 
 ```
-├── server.py             # Flask server (you will edit only the TODOs)
+├── main.py             # Flask server (you will edit only the TODOs)
 ├── web/                  # Front-end files (HTML, JS, CSS)
 │   ├── index.html
 │   └── main.js
