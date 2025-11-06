@@ -52,7 +52,7 @@ Folder structure overview:
 From your project folder, run:
 
 ```bash
-python server.py
+python main.py
 ```
 
 If successful, you should see:
@@ -95,25 +95,12 @@ The five TODOs are:
 | 04 | Count flights for aircraft an employee is certified to operate |
 | 05 | List employees with at least one certificate and their salary |
 
+If you want to view dashboard with full function, run:
+```bash
+python main_solution.py
+```
 ---
 
-## 5. Submission Format
-Submit the following:
-
-1. **A screenshot** of the running dashboard (browser view):  
-   - The left chart shows correct flight counts.  
-   - The right table shows real employee and certificate data.  
-   - Choosing same Employee's name as following screenshot.
-   ![Submission_example](/src/Submission_example.png)
-
-
-2. Please name your screenshot file:  
-   ```
-   StudentID_Airline_SQL.png
-   ```
-4. Upload the screenshot to week 8 Teams channel.
-
----
 
 ✅ **Reminder:**
 - You do **not** need to change any HTML, CSS, or JavaScript.
