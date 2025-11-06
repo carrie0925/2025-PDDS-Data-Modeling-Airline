@@ -1,5 +1,7 @@
 # 🧩 Airline Database Practice (SQL + Flask)
 
+![Dashboard_output](/src/output.mov)
+
 ## 1. Project Description
 This exercise helps you practice writing SQL queries in a real environment.
 You will connect a pre-built SQLite database (`airline.sqlite`) with a simple Flask back-end and a front-end dashboard.
