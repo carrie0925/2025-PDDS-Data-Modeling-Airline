@@ -27,7 +27,8 @@ pip install flask
 Folder structure overview:
 
 ```
-├── main.py             # Flask server (you will edit only the TODOs)
+├── main.py             # Flask server (student part: you will edit only the TODOs)
+├── main_solution.py    # Flask server (TA part: TODOS part answer)
 ├── web/                  # Front-end files (HTML, JS, CSS)
 │   ├── index.html
 │   └── main.js
