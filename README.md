@@ -54,7 +54,7 @@ Folder structure overview:
 From your project folder, run:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 If successful, you should see:
@@ -99,7 +99,7 @@ The five TODOs are:
 
 If you want to view dashboard with full function, run:
 ```bash
-python main_solution.py
+python3 main_solution.py
 ```
 ---
 
