@@ -24,12 +24,6 @@ Please make sure your environment includes the following packages:
 pip install flask
 ```
 
-Optional (for debugging SQLite):
-
-```bash
-pip install db-browser-for-sqlite
-```
-
 Folder structure overview:
 
 ```
